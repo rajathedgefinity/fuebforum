@@ -26,7 +26,7 @@ SECRET_KEY = '2xd8oqvbyh7dgy&g!jk)9pi!j36j5!a^rb*4vm%%ok2p3wc0e5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -52,6 +52,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'FuebForum.urls'
+
+AUTH_USER_MODEL = 'community.User'
 
 TEMPLATES = [
     {
@@ -124,4 +126,3 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'community/static/'),
 ]
-

@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.decorators import permission_required, login_required
 
 # Create your views here.
 
@@ -28,8 +29,10 @@ def faq(request):
 def forum_thread(request):
     return render(request, 'community/forum-thread.html')
 
+@login_required(login_url = '/login/')
 def profile(request):
     return render(request, 'community/profile.html')
 
+@login_required(login_url = '/login/')
 def profile_settings(request):
     return render(request, 'community/profile-setting.html')

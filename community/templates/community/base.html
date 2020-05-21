@@ -46,7 +46,7 @@
                   </li>
                   {% if user.is_authenticated %}
                   <li class="profile-menu"><a class="fb-nav-link" href="javascript:void(0)">
-                      <div class="d-flex align-items-center"><img src="{% static 'community/assets/images/forum/profile-img.png' %}"/><span class="member-name">{{ user.username }}</span><img class="arrow-menu active" src="{% static 'community/assets/images/forum/arrow.svg' %}"/></div></a>
+                      <div class="d-flex align-items-center"><img src="{% static 'community/assets/images/forum/profile-img.png' %}"/><span class="member-name">{{ user.first_name }} {{ user.last_name }}</span><img class="arrow-menu active" src="{% static 'community/assets/images/forum/arrow.svg' %}"/></div></a>
                     <div class="profile-menu__dropdown">
                       <ul>
                         <li>

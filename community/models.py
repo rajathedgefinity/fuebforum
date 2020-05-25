@@ -13,6 +13,7 @@ class User(AbstractUser):
         ('Female', _('Female')),
     )
 
+    cover = models.ImageField(upload_to='profileimages/', blank=True)
     mobile = models.CharField(max_length=255, default="0000000000")
     gender = models.CharField(max_length=7, choices=GENDER, blank=True)
     city = models.CharField(max_length=30, blank=True)

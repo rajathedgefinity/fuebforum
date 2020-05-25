@@ -77,11 +77,11 @@
                     <div class="tabbable-panel">
                       <div class="tabbable-line">
                         <ul class="nav nav-tabs">
-                          <li><a class="active" id="login-tab" href="#tab_login" data-toggle="tab">Login</a></li>
-                          <li><a class="log-item" id="register-tab" href="#tab_register" data-toggle="tab">Register</a></li>
+                          <li><a class="log-item" id="login-tab" href="#tab_login" data-toggle="tab">Login</a></li>
+                          <li><a class="active" id="register-tab" href="#tab_register" data-toggle="tab">Register</a></li>
                         </ul>
                         <div class="tab-content">
-                          <div class="tab-pane active" id="tab_login">
+                          <div class="tab-pane" id="tab_login">
                             <div>
                               <form action="" method="POST" class="join-form login-form mt-0" id="loginForm" autocomplete="off">
                                 {% csrf_token %}
@@ -112,7 +112,7 @@
                               </form>
                             </div>
                           </div>
-                          <div class="tab-pane tab-registr" id="tab_register">
+                          <div class="tab-pane tab-registr active" id="tab_register">
                             <div>
                               <form action="{% url 'register' %}" method="POST" class="join-form registr-form mt-0" id="registrForm" autocomplete="off">
                                 {% csrf_token %}

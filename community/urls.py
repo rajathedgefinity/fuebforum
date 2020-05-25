@@ -5,6 +5,7 @@ from community import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('login/', views.login_forum, name='login'),
+    path('register/', views.login_register, name='register'),
     # path('post-login/', views.post_login, name='post-login'),
     path('faq/', views.faq, name='faq'),
     path('forum-thread/', views.forum_thread, name='forum_thread'),

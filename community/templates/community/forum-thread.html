@@ -6,9 +6,9 @@
           <div class="row m-0">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb align-items-center pl-0 mb-0">
-                <li class="breadcrumb-item d-flex"><a href="#">Home</a></li>
-                <li class="breadcrumb-item d-flex"><a href="#">Library</a></li>
-                <li class="breadcrumb-item d-flex active" aria-current="page">Data</li>
+                <li class="breadcrumb-item d-flex"><a href="{% url 'index' %}">Home</a></li>
+                <li class="breadcrumb-item d-flex active" aria-current="Thread">Threads</li>
+                <!-- <li class="breadcrumb-item d-flex active" aria-current="page">Data</li> -->
               </ol>
             </nav>
           </div>
@@ -25,13 +25,27 @@
                   </div>
                   <p class="thread__desc">My Android phone is not able to connect to the touch magic. Can anyone suggest how to connect motorola mobile to toch magic</p>
                   <div class="d-flex align-items-center">
-                    <div class="action-item"><img src="{%  static "community/assets/images/forum/reply.svg" %}"/>
+                    <div class="action-item">
+                      <button type="button" name="button" style="border:0;background-color: Transparent;" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                      <img src="{%  static "community/assets/images/forum/reply.svg" %}"/>
+                      </button>
                       <p class="action-item__title">Reply</p>
+                      <div class="collapse" id="collapseExample">
+                      <div class="card card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                      </div>
                     </div>
-                    <div class="action-item"><img src="{%  static "community/assets/images/forum/like.svg" %}"/>
+                    </div>
+                    <div class="action-item">
+                      <button type="button" name="button" style="border:0;background-color: Transparent;">
+                      <img src="{%  static "community/assets/images/forum/like.svg" %}"/>
+                      </button>
                       <p class="action-item__title">Like</p>
                     </div>
-                    <div class="action-item"><img src="{%  static "community/assets/images/forum/share.svg" %}"/>
+                    <div class="action-item">
+                      <button type="button" name="button" style="border:0;background-color: Transparent;">
+                      <img src="{%  static "community/assets/images/forum/share.svg" %}"/>
+                      </button>
                       <p class="action-item__title">Share</p>
                     </div>
                   </div>

@@ -19,7 +19,7 @@
             <div class="tab-pane active" id="user-profile" role="tabpanel" aria-labelledby="safty-tab">
               <div class="row mt-4 mt-md-5">
                 {% if user.is_authenticated %}
-                <form class="contact-join-form getTouch-form w-100" autocomplete="off">
+                <form id="profile_account_form" class="contact-join-form getTouch-form w-100" autocomplete="off">
                   <div class="d-flex flex-column flex-md-row">
                     <div class="col-md-6">
                       <div class="form-group mb-3">
@@ -37,7 +37,7 @@
                         {% else %}
                         <div class="img-wrper"><img src="{% static "community/assets/images/profile-imgi.png" %}" width="96" height="96" alt=""/></div>
                         <div class="media-body my-auto ml-2 ml-md-4">
-                          <input class="d-none profile-img" id="profile" name="profile" type="file" accept="image/x-png,image/gif,image/jpeg"/>
+                          <input class="d-none profile-img" id="profile" name="profile_img" type="file" accept="image/x-png,image/gif,image/jpeg"/>
                           <label class="gradient-text-only" for="profile" data-value="Upload from Computer">
                             <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
                               <text>Upload Profile Image</text>
@@ -367,8 +367,8 @@
                         <label class="form-control-placeholder" for="birthday">Date of Birth</label>
                       </div>
                       <div class="d-flex justify-content-end my-md-3 my-2">
-                        <button class="btn btn--white mt-0 mr-3 mr-md-5" type=""><span>Reset</span></button>
-                        <button class="btn btn--gradient mt-0" type=""><span>Save Changes</span></button>
+                        <button class="btn btn--white mt-0 mr-3 mr-md-5" type="reset" ><span>Reset</span></button>
+                        <button class="btn btn--gradient mt-0" type="submit"><span>Save Changes</span></button>
                       </div>
                     </div>
                   </div>
@@ -376,62 +376,26 @@
               </div>
             </div>
             <div class="tab-pane" id="account" role="tabpanel" aria-labelledby="Lights-tab">
-              <div class="media mt-4 mt-md-5">
-                <div class="img-wrper"><img src="{% static "community/assets/images/profile-img.png" %}" alt=""/></div>
-                <div class="media-body my-auto ml-2 ml-md-4">
-                  <input class="d-none profile-img" id="profile" name="profile" type="file" accept="image/x-png,image/gif,image/jpeg"/>
-                  <label class="gradient-text-only" for="profile" data-value="Upload from Computer">
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-                      <text>Upload from Computer</text>
-                    </svg>
-                  </label>
-                </div>
-              </div>
               <div class="row mt-4 mt-md-5">
                 <form class="contact-join-form getTouch-form w-100" autocomplete="off">
                   <div class="d-flex flex-column flex-md-row">
-                    <div class="col-md-6">
-                      <div class="form-group mb-3">
-                        <input class="form-control input-type" id="profile-First" type="text" required=""/>
-                        <label class="form-control-placeholder" for="profile-First">First Name</label>
+                    <div class="col-md-12">
+                      <!-- Default checked -->
+                      <div class="custom-control custom-checkbox checkbox-lg my-md-3 my-2">
+                        <input type="checkbox" class="custom-control-input" id="checkbox-1" >
+                        <label class="custom-control-label" for="checkbox-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do you like to recieve mails on notifications when you got like and replies to the threads that you created ?</label>
                       </div>
-                      <div class="form-group my-md-3 my-2">
-                        <input class="form-control input-type" id="profile-Email" type="text" required=""/>
-                        <label class="form-control-placeholder" for="profile-Email">Email ID</label>
+
+                      <div class="custom-control custom-checkbox checkbox-lg my-md-3 my-2">
+                        <input type="checkbox" class="custom-control-input" id="checkbox-2" >
+                        <label class="custom-control-label" for="checkbox-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Would you like to receive our product updates and monthly eNewsletter ?</label>
                       </div>
-                      <div class="form-group radiobuttons mt-md-3 mt-2">
-                        <label class="gender-lbl" for="profile-gender">Gender</label>
-                        <div class="gender-wrp">
-                          <div class="rdio rdio-primary mr-3 mr-md-4">
-                            <input id="male" name="radio" value="1" type="radio" checked=""/>
-                            <label for="male">Male</label>
-                          </div>
-                          <div class="rdio rdio-primary">
-                            <input id="female" name="radio" value="2" type="radio"/>
-                            <label for="female">Female</label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group mb-3">
-                        <input class="form-control input-type" id="profile-last" type="text" required=""/>
-                        <label class="form-control-placeholder" for="profile-last">First Name</label>
-                      </div>
-                      <div class="form-group my-md-3 my-2">
-                        <input class="form-control input-type" id="mobile1" type="number" required="" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode &gt;= 48 &amp;&amp; event.charCode &lt;= 57"/>
-                        <label class="form-control-placeholder" for="mobile1">Phone Number</label>
-                      </div>
-                      <div class="form-group d-flex align-items-center my-md-3 my-2 psw-input">
-                        <input class="form-control input-type" id="password" type="password" required=""/>
-                        <label class="form-control-placeholder" for="password">Password</label><a class="psw-link gradient-text-only fnt-sm d-block pr-0" href="#" data-value="Change Password">
-                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-                            <text>Change Password</text>
-                          </svg></a>
-                      </div>
+
                       <div class="d-flex justify-content-end my-md-3 my-2">
-                        <button class="btn btn--white mt-0 mr-3 mr-md-5" type=""><span>Reset</span></button>
-                        <button class="btn btn--gradient mt-0" type=""><span>Save Changes</span></button>
+                        <button class="btn btn--white mt-0 mr-3 mr-md-5" type="reset" ><span>Reset</span></button>
+                        <!-- <input class="btn btn--white mt-0 mr-3 mr-md-5" type="reset" value="Reset"> -->
+                        <button class="btn btn--gradient mt-0" type="submit"><span>Save Changes</span></button>
+                        <!-- <input class="btn btn--gradient mt-0" type="submit" value="Save Changes"> -->
                       </div>
                     </div>
                   </div>

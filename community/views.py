@@ -43,6 +43,7 @@ def login_register(request):
             return redirect('index')
     return render(request, 'community/forum-register.html')
 
+@login_required(login_url = '/login/')
 def logout_user(request):
     logout(request)
     return redirect('index')
@@ -50,6 +51,7 @@ def logout_user(request):
 def faq(request):
     return render(request, 'community/faq.html')
 
+@login_required(login_url = '/login/')
 def forum_thread(request):
     return render(request, 'community/forum-thread.html')
 
@@ -59,4 +61,5 @@ def profile(request):
 
 @login_required(login_url = '/login/')
 def profile_settings(request):
+    
     return render(request, 'community/profile-setting.html')

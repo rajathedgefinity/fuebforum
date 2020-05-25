@@ -14,7 +14,35 @@
       <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:400,500,700&amp;display=swap" rel="stylesheet"/>
       <link href="https://fonts.googleapis.com/css?family=Barlow&amp;display=swap" rel="stylesheet"/>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
-    <link href="{% static 'community/css/app.css' %}" rel="stylesheet"></head>
+    <link href="{% static 'community/css/app.css' %}" rel="stylesheet">
+    <style>
+
+        .checkbox-lg .custom-control-label::before,
+        .checkbox-lg .custom-control-label::after {
+        top: .8rem;
+        width: 1.55rem;
+        height: 1.55rem;
+        }
+
+        .checkbox-lg .custom-control-label {
+        padding-top: 13px;
+        padding-left: 6px;
+        }
+
+
+        .checkbox-xl .custom-control-label::before,
+        .checkbox-xl .custom-control-label::after {
+        top: 1.2rem;
+        width: 1.85rem;
+        height: 1.85rem;
+        }
+
+        .checkbox-xl .custom-control-label {
+        padding-top: 23px;
+        padding-left: 10px;
+    }
+    </style>
+  </head>
   <body>
     <main class="js-forum-page js-home-page">
       <svg class="text-gradient-value" xmlns="http://www.w3.org/2000/svg" version="1.1">

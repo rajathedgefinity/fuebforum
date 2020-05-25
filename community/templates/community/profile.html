@@ -7,7 +7,11 @@
             <div class="col-12">
               <div class="profile-banner">
                 {% if user.is_authenticated %}
-                <div class="d-flex flex-column justify-content-center align-items-center"><img class="mb-3" src="{% static "community/assets/images/forum/profile-img1.png" %}" alt="profile"/>
+                {% if user.cover.url is not None %}
+                  <div class="d-flex flex-column justify-content-center align-items-center"><img class="mb-3" src="{{ user.cover.url }}" width="96" height="96" alt="profile"/>
+                {% else %}
+                  <div class="d-flex flex-column justify-content-center align-items-center"><img class="mb-3" src="{% static 'community/assets/images/profile-imgi.png' %}" width="96" height="96" alt="profile"/>
+                {% endif %}
                   <p class="mb-3 profile-name">{{ user.first_name }} {{ user.last_name }}</p>
                   <p class="profile-desc">{{ user.email }}<span class="ml-3">{{ user.mobile }}</span></p>
                 </div>

@@ -62,7 +62,6 @@ def logout_user(request):
 def faq(request):
     return render(request, 'community/faq.html')
 
-@login_required(login_url = '/login/')
 def forum_thread(request, id):
     # print(id)
     entry = allthread.objects.get(pk=id)

@@ -153,21 +153,33 @@
                         </table>
                       </div>
                       <div class="col-12">
+                        {% if created_threads.paginator.num_pages > 1 %}
                         <nav class="table-pagination">
-                          <h4>Page <span class="pagi-current-num">1 </span>0f <span class="pagi-total-num">24</span></h4>
+                          <h4>Page <span class="pagi-current-num">1 </span> Of <span class="pagi-total-num">{{ created_threads.paginator.num_pages }}</span></h4>
                           <ul class="pagination">
-                            <li class="pagination-item"><a class="page-link pagi-arrow pagi-arrow--left" href="#"></a></li>
-                            <li class="pagination-item"><a class="page-link active" href="#">01</a></li>
-                            <li class="pagination-item"><a class="page-link" href="#">02</a></li>
-                            <li class="pagination-item"><a class="page-link" href="#">03</a></li>
-                            <li class="pagination-item"><a class="page-link" href="#">04</a></li>
-                            <li class="pagination-item"><a class="page-link" href="#">05</a></li>
-                            <li class="pagination-item"><a class="page-link" href="#">06</a></li>
-                            <li class="pagination-item"><a class="page-link" href="#">07</a></li>
-                            <li class="pagination-item"><a class="page-link" href="#">08</a></li>
-                            <li class="pagination-item"><a class="page-link pagi-arrow pagi-arrow--right" href="#"></a></li>
+                            {% if created_threads.has_previous %}
+                            <li class="pagination-item"><a class="page-link pagi-arrow pagi-arrow--left" href="?page={{ all_entries.previous_page_number }}"></a></li>
+                            {% else %}
+                            <li class="pagination-item disabled"><a class="page-link pagi-arrow pagi-arrow--left disabled"></a></li>
+                            {% endif %}
+
+                            {% for i in created_threads.paginator.page_range %}
+                            {% if created_threads.number == i %}
+                              <!-- <li class="pagination-item"><a class="page-link active" href="#">01</a></li> -->
+                              <li class="pagination-item"><a class="page-link active" href="?page={{ i }}">{{ i }}</a></li>
+                            {% else %}
+                              <!-- <li class="pagination-item"><a class="page-link" href="#">02</a></li> -->
+                              <li class="pagination-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                            {% endif %}
+                          {% endfor %}
+                            {% if created_threads.has_next %}
+                            <li class="pagination-item"><a class="page-link pagi-arrow pagi-arrow--right" href="?page={{ all_entries.next_page_number }}"></a></li>
+                            {% else %}
+                            <li class="pagination-item disabled"><a class="page-link pagi-arrow pagi-arrow--right"></a></li>
+                            {% endif %}
                           </ul>
-                        </nav>
+                         </nav>
+                        {% endif %}
                       </div>
                     </div>
                   </div>

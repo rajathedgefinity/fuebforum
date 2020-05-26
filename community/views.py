@@ -20,7 +20,7 @@ def index(request):
         b.save()
         return redirect('index')
     all_entries = allthread.objects.all().order_by('-dateandtime')
-    paginator = Paginator(all_entries, 2)
+    paginator = Paginator(all_entries, 5)
     page = request.GET.get('page')
     all_entries = paginator.get_page(page)
     return render(request, 'community/forum-landing.html',{'all_entries':all_entries})
@@ -76,7 +76,10 @@ def forum_thread(request, id):
 def profile(request):
     if request.user.is_authenticated:
         created_threads = allthread.objects.all().filter(thread_by = request.user)
-        print(created_threads)
+        # print(created_threads)
+        paginator = Paginator(created_threads, 2)
+        page = request.GET.get('page')
+        created_threads = paginator.get_page(page)
     return render(request, 'community/profile.html',{'created_threads':created_threads})
 
 @login_required(login_url = '/login/')

@@ -3,6 +3,7 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import permission_required, login_required
 from django.contrib.auth import get_user_model
 from .models import allthread
+from django.core.paginator import Paginator
 
 User = get_user_model()
 
@@ -19,6 +20,9 @@ def index(request):
         b.save()
         return redirect('index')
     all_entries = allthread.objects.all().order_by('-dateandtime')
+    paginator = Paginator(all_entries, 2)
+    page = request.GET.get('page')
+    all_entries = paginator.get_page(page)
     return render(request, 'community/forum-landing.html',{'all_entries':all_entries})
 
 def login_forum(request):

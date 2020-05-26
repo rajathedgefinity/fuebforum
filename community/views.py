@@ -25,6 +25,20 @@ def index(request):
     all_entries = paginator.get_page(page)
     return render(request, 'community/forum-landing.html',{'all_entries':all_entries})
 
+def closed_issues(request):
+    all_entries = allthread.objects.all().filter(solved = True).order_by('-dateandtime')
+    paginator = Paginator(all_entries, 5)
+    page = request.GET.get('page')
+    all_entries = paginator.get_page(page)
+    return render(request, 'community/forum-landing.html',{'all_entries':all_entries})
+
+def opened_issues(request):
+    all_entries = allthread.objects.all().filter(solved = False).order_by('-dateandtime')
+    paginator = Paginator(all_entries, 5)
+    page = request.GET.get('page')
+    all_entries = paginator.get_page(page)
+    return render(request, 'community/forum-landing.html',{'all_entries':all_entries})
+
 def login_forum(request):
     if request.method == 'POST':
         username = request.POST['username']

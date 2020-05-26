@@ -66,8 +66,8 @@
                   <li class="d-md-flex align-items-center d-none">
                     <nav>
                       <ul class="fb-mainnav fb-mainnav--black align-items-center d-sm-flex">
-                        <li class="d-flex"><a class="fb-nav-link" href="javascript:void(0)">Open Issues</a><span class="forum-issue">123</span></li>
-                        <li><a class="fb-nav-link" href="javascript:void(0)">Closed Issues</a></li>
+                        <li class="d-flex"><a class="fb-nav-link" href="{% url 'opened' %}">Open Issues</a><span class="forum-issue">123</span></li>
+                        <li><a class="fb-nav-link" href="{% url 'closed' %}">Closed Issues</a></li>
                         <li><a class="fb-nav-link" href="{% url 'faq' %}">Knowledge Base</a></li>
                       </ul>
                     </nav>

@@ -133,34 +133,22 @@
                             </tr>
                           </thead>
                           <tbody class="table-body">
+                            {% if created_threads %}
+                            {% for threads in created_threads %}
                             <tr>
-                              <td>How to switch off lights in my living room Threads Created By You</td>
-                              <td>Smart Home automation / Magic Switches</td>
-                              <td class="thrd-status"><img src="{% static "community/assets/icons/Comment-Icon.svg" %}" alt="icon-comment"/><span class="thrd-status__num">2</span><span>Replies </span><span class="thrdStat thrdStat--solved">Solved</span></td>
-                              <td class="thrd-date">20 Dec 2019 <span>09:45 Am</span></td>
+                              <td>{{ threads.topic }}</td>
+                              <td>{{ threads.category }} / {{ threads.product }}</td>
+                              <td class="thrd-status"><img src="{% static "community/assets/icons/Comment-Icon.svg" %}" alt="icon-comment"/><span class="thrd-status__num">{{ threads.replies }}</span><span>Replies </span>
+                                {% if threads.solved %}
+                                <span class="thrdStat thrdStat--solved">Solved</span></td>
+                                {% else %}
+                                <span class="thrdStat thrdStat--open">Open</span></td>
+                                {% endif %}
+                              <td class="thrd-date">{{ threads.dateandtime }}</span></td>
                               <td><img class="action-icons mr-3" src="{% static "community/assets/images/forum/edit.svg" %}"/><img class="action-icons" src="{% static "community/assets/images/forum/delete.svg" %}"/></td>
                             </tr>
-                            <tr>
-                              <td>How to switch off lights in my living room</td>
-                              <td>Smart Home automation / Magic Switches</td>
-                              <td class="thrd-status"><img src="{% static "community/assets/icons/Comment-Icon.svg" %}" alt="icon-comment"/><span class="thrd-status__num">2</span><span>Replies </span><span class="thrdStat thrdStat--solved">Solved</span></td>
-                              <td class="thrd-date">20 Dec 2019 <span>09:45 Am</span></td>
-                              <td><img class="action-icons mr-3" src="{% static "community/assets/images/forum/edit.svg" %}"/><img class="action-icons" src="{% static "community/assets/images/forum/delete.svg" %}"/></td>
-                            </tr>
-                            <tr>
-                              <td>How to switch off lights in my living room</td>
-                              <td>Smart Home automation / Magic Switches</td>
-                              <td class="thrd-status"><img src="{% static "community/assets/icons/Comment-Icon.svg" %}" alt="icon-comment"/><span class="thrd-status__num">2</span><span>Replies </span><span class="thrdStat thrdStat--open">Open</span></td>
-                              <td class="thrd-date">20 Dec 2019 <span>09:45 Am</span></td>
-                              <td><img class="action-icons mr-3" src="{% static "community/assets/images/forum/edit.svg" %}"/><img class="action-icons" src="{% static "community/assets/images/forum/delete.svg" %}"/></td>
-                            </tr>
-                            <tr>
-                              <td>How to switch off lights in my living room</td>
-                              <td>Smart Home automation / Magic Switches</td>
-                              <td class="thrd-status"><img src="{% static "community/assets/icons/Comment-Icon.svg" %}" alt="icon-comment"/><span class="thrd-status__num">2</span><span>Replies </span><span class="thrdStat thrdStat--solved">Solved</span></td>
-                              <td class="thrd-date">20 Dec 2019 <span>09:45 Am</span></td>
-                              <td><img class="action-icons mr-3" src="{% static "community/assets/images/forum/edit.svg" %}"/><img class="action-icons" src="{% static "community/assets/images/forum/delete.svg" %}"/></td>
-                            </tr>
+                            {% endfor %}
+                            {% endif %}
                           </tbody>
                         </table>
                       </div>

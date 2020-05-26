@@ -71,7 +71,10 @@ def forum_thread(request, id):
 
 @login_required(login_url = '/login/')
 def profile(request):
-    return render(request, 'community/profile.html')
+    if request.user.is_authenticated:
+        created_threads = allthread.objects.all().filter(thread_by = request.user)
+        print(created_threads)
+    return render(request, 'community/profile.html',{'created_threads':created_threads})
 
 @login_required(login_url = '/login/')
 def profile_settings(request):

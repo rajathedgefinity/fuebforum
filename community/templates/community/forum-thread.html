@@ -13,17 +13,28 @@
             </nav>
           </div>
           <div class="row m-0 thread-padding">
+            {% if entry %}
             <div class="col-md-8 px-0">
-              <div class="main-thread"><span class="thrdStat thrdStat--default">Armour Lock </span><span class="thrdStat thrdStat--default">Security</span>
-                <h1 class="main-thread__title">How to switch off lights in my living room ?<span class="thrdStat thrdStat--solved ml-4">Solved</span></h1>
+              <div class="main-thread"><span class="thrdStat thrdStat--default">{{ entry.category }}</span><span class="thrdStat thrdStat--default">{{ entry.product }}</span>
+                <h1 class="main-thread__title">{{ entry.topic }}
+                  {% if entry.solved %}
+                  <span class="thrdStat thrdStat--solved ml-4">Solved</span></h1>
+                  {% else %}
+                  <span class="thrdStat thrdStat--open ml-4">Open</span></h1>
+                  {% endif %}
                 <div class="thread">
-                  <div class="media mb-3 mb-md-4"><img class="align-self-center mr-3" src="{%  static "community/assets/images/forum/thread-1.png" %}"/>
+                  <div class="media mb-3 mb-md-4">
+                    {% if entry.thread_by.cover.url is not None %}
+                    <img class="align-self-center mr-3" src="{{ user.cover.url }}" width="48" height="48"/>
+                    {% else %}
+                    <img class="align-self-center mr-3" src="{% static "community/assets/images/profile-imgi.png" %}" width="48" height="48"/>
+                    {% endif %}
                     <div class="media-body">
-                      <h5 class="thread__title">Satya Nadaella</h5>
-                      <p class="thread__date">Created on 20 Dec 2019  09:45 Am</p>
+                      <h5 class="thread__title">{{ entry.thread_by.first_name }} {{ entry.thread_by.last_name }}</h5>
+                      <p class="thread__date">Created on {{ entry.dateandtime }}</p>
                     </div>
                   </div>
-                  <p class="thread__desc">My Android phone is not able to connect to the touch magic. Can anyone suggest how to connect motorola mobile to toch magic</p>
+                  <p class="thread__desc">{{ entry.content }}</p>
                   <div class="d-flex align-items-center">
                     <div class="action-item">
                       <button type="button" name="button" style="border:0;background-color: Transparent;" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
@@ -52,6 +63,7 @@
                 </div>
               </div>
             </div>
+            {% endif %}
           </div>
           <div class="row m-0 thread-padding border-0">
             <div class="col-md-8 px-0">

@@ -31,5 +31,6 @@ class allthread(models.Model):
     replies = models.IntegerField(default=0,blank=True)
     thread_status = models.BooleanField(default=False)
     dateandtime = models.DateTimeField(auto_now=True,blank=True)
+    solved = models.BooleanField(default=False)
     likes = models.IntegerField(default=0)
     shares = models.IntegerField(default=0)

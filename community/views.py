@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import permission_required, login_required
 from django.contrib.auth import get_user_model
 from .models import allthread
 from django.core.paginator import Paginator
+from django.http import JsonResponse
 
 User = get_user_model()
 
@@ -38,6 +39,17 @@ def opened_issues(request):
     page = request.GET.get('page')
     all_entries = paginator.get_page(page)
     return render(request, 'community/forum-landing.html',{'all_entries':all_entries})
+
+def counting_opened_issues(request):
+    count_entries = allthread.objects.all().filter(solved=False).count()
+    print(count_entries)
+    data = {
+        'opened_issues':count_entries
+    }
+    if request.method == 'GET':
+        return JsonResponse(data)
+    return JsonResponse(data)
+
 
 def login_forum(request):
     if request.method == 'POST':

@@ -22,7 +22,7 @@
           <div class="row">
             <div class="col-12">
               <ul class="d-flex align-items-center justify-content-between">
-                <li class="gsap-logo gsap-logo--black"><a href="index.html">
+                <li class="gsap-logo gsap-logo--black"><a href="{% url 'index' %}">
                     <svg xmlns="http://www.w3.org/2000/svg" width="90" height="32" viewBox="0 0 90 32">
                       <g>
                         <path d="M76.285 27.57c3.554 0 5.676-2.838 5.676-7.59 0-3.647-1.687-7.327-5.456-7.327-1.698 0-3.033.559-3.966 1.661-1.017 1.202-1.534 3.049-1.534 5.49v1.011c0 3.265 1.387 6.755 5.28 6.755m-27.852-9.983h9.358l-.088-.546c-.277-1.706-1.232-4.57-4.516-4.57-1.734 0-3.949.792-4.65 4.56zm-.227 3.939l.053.519c.388 3.741 1.968 5.483 4.974 5.483 2.217 0 3.81-1.01 4.37-2.774l.064-.2H64v-3.028zm-5.92 4.448v5.419h-7.008v-2.727l-1.475 1.73-.028.021C31.546 32 29.409 32 27.524 32c-2.18 0-4.085-.57-5.508-1.646-1.28-.967-2.122-2.326-2.373-3.826-.178-1.182-.214-2.576-.214-4.307V9.143h7.007v10.204c0 .725.044 2.61.18 3.808.316 2.64 1.724 3.925 4.306 3.925 2.646 0 4.356-2.293 4.356-5.842V9.143h7.008v5.559l.006-.014a11.193 11.193 0 0 1 2.155-3.15C46.71 9.224 49.874 8 53.595 8c3.677 0 6.738 1.294 8.853 3.743.61.706 1.129 1.508 1.552 2.372V0h7.005v12.023l.775-1.326.034-.03c1.715-1.53 4.491-2.444 7.427-2.444 6.015 0 9.902 4.46 9.902 11.36 0 3.825-1.103 7.026-3.19 9.257-1.905 2.038-4.571 3.16-7.506 3.16-1.474 0-4.229-.17-6.13-1.306l-.036-.022-1.276-1.407v2.12H64v-5.193C62.116 29.902 58.237 32 53.142 32c-3.464 0-6.41-1.015-8.516-2.936a9.92 9.92 0 0 1-2.334-3.227c-.542-1.182-.897-2.51-1.055-3.962.14 1.508.494 2.883 1.049 4.1zM21.714 1.143v5.303H6.925v7.927H19.31v5.303H6.925V32H0V1.143z"></path>
@@ -135,12 +135,13 @@
           <div class="row tab-container justify-content-center">
             <div class="col-lg-10 pb-md-2">
               <ul class="faq-tab nav my-2 my-md-5 d-flex justify-content-between" role="tablist">
-                <li class="nav-item"><a class="nav-link faq-tab-head py-3 px-4 active" id="safty-tab" data-toggle="tab" href="#safty" role="tab" aria-controls="safty" aria-selected="true">Safety </a></li>
-                <li class="nav-item"><a class="nav-link faq-tab-head py-3 px-4" id="Lights-tab" data-toggle="tab" href="#Lights" role="tab" aria-controls="Lights" aria-selected="false">Lights</a></li>
-                <li class="nav-item"><a class="nav-link faq-tab-head py-3 px-4" id="Temperature-tab" data-toggle="tab" href="#Temperature" role="tab" aria-controls="Temperature" aria-selected="false">Temperature</a></li>
-                <li class="nav-item"><a class="nav-link faq-tab-head py-3 px-4" id="lock-tab" data-toggle="tab" href="#lock" role="tab" aria-controls="lock" aria-selected="false">Armour Lock     </a></li>
-                <li class="nav-item"><a class="nav-link faq-tab-head py-3 px-4" id="vibe-tab" data-toggle="tab" href="#vibe" role="tab" aria-controls="vibe" aria-selected="false">Vibe Bell</a></li>
-                <li class="nav-item"><a class="nav-link faq-tab-head py-3 px-4" id="magic-swich" data-toggle="tab" href="#magic-tab" role="tab" aria-controls="vibe" aria-selected="false">Magic Switches</a></li>
+                <li class="nav-item"><a class="nav-link faq-tab-head py-3 px-4 active" id="safty-tab" data-toggle="tab" href="#safty" role="tab" aria-controls="safty" aria-selected="true">Fueb </a></li>
+                <li class="nav-item"><a class="nav-link faq-tab-head py-3 px-4" id="Lights-tab" data-toggle="tab" href="#Lights" role="tab" aria-controls="Lights" aria-selected="false">Product </a></li>
+                <li class="nav-item"><a class="nav-link faq-tab-head py-3 px-4" id="Temperature-tab" data-toggle="tab" href="#Temperature" role="tab" aria-controls="Temperature" aria-selected="false">Partnership</a></li>
+                <li class="nav-item"><a class="nav-link faq-tab-head py-3 px-4" id="lock-tab" data-toggle="tab" href="#lock" role="tab" aria-controls="lock" aria-selected="false">Support     </a></li>
+                <li class="nav-item"><a class="nav-link faq-tab-head py-3 px-4" id="vibe-tab" data-toggle="tab" href="#vibe" role="tab" aria-controls="vibe" aria-selected="false">Installation </a></li>
+                <li class="nav-item"><a class="nav-link faq-tab-head py-3 px-4" id="magic-swich" data-toggle="tab" href="#magic-tab" role="tab" aria-controls="vibe" aria-selected="false">Energy Efficiency</a></li>
+                <li class="nav-item"><a class="nav-link faq-tab-head py-3 px-4" id="sanitiz-tab" data-toggle="tab" href="#sanitiz-tab" role="tab" aria-controls="sanitiz" aria-selected="false">Sanitization</a></li>
               </ul>
             </div>
             <div class="col-lg-8 tab-content">
@@ -148,214 +149,155 @@
                 <div class="accordion" id="accordion-safety">
                   <div class="card acc-card">
                     <div class="card-header py-3 pl-0" id="headingOne">
-                      <h2 class="my-2 section-sub-heading" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">What are the advantages of purchasing and installing the Fueb System?</h2>
+                      <h2 class="my-2 section-sub-heading" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Why opt for Fueb home automation system?</h2>
                     </div>
                     <div class="collapse show" id="collapseOne" aria-labelledby="headingOne" data-parent="#accordion-safety">
-                      <p class="card-body txt-des-bk px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p class="card-body txt-des-bk px-0 pt-1">We have an enviable line up of products which are world class in function yet affordable to all the home owners. Our motto is to connect the world in a sustainable manner thus making living safer and convenient.  Fueb believes in automating what can be automated, which makes your home smart and energy efficient. It reduces the time you spend on manual work, giving you more opportunities to strengthen bonds and expand your horizons. <br/>
+                      Members of a home now spend more time in different locations with a need for a technology-enabled system that will ensure the safety of their homes while they are away. Your home is certainly your most prized possession. At Fueb, we have designed automation solutions for end-to-end security, lifestyle automation and enhanced convenience. Our motto is simple, your home is entirely taken care off when you are not there.</p>
                     </div>
                   </div>
                   <div class="card acc-card">
                     <div class="card-header py-2 py-md-4 pl-0" id="headingTwo">
-                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">How to connect armour lock with my google home</h2>
+                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">How does Fueb work?</h2>
                     </div>
                     <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordion-safety">
-                      <p class="txt-des-bk card-body px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p class="txt-des-bk card-body px-0 pt-1">Products by Fueb let you be in charge of your house even from a remote location. You will be able to access your home appliances from anywhere via Fueb app. Fueb, on your personal device, can lock and unlock the door for you, switch on or off the lights and also our VDB Smart Door Bell keeps a check who is at the door without you being there and sends you an alert when something unusual takes place. </p>
                     </div>
                   </div>
                   <div class="card acc-card">
                     <div class="card-header py-2 py-md-4 pl-0" id="headingThree">
-                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">How to connect armour lock with my google home</h2>
+                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Will my house look clumsy once I install Fueb?</h2>
                     </div>
                     <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordion-safety">
-                      <p class="txt-des-bk card-body px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                    </div>
-                  </div>
-                  <div class="card acc-card">
-                    <div class="card-header py-2 py-md-4 pl-0" id="headingFour">
-                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">How to connect armour lock with my google home</h2>
-                    </div>
-                    <div class="collapse" id="collapseFour" aria-labelledby="headingFour" data-parent="#accordion-safety">
-                      <p class="txt-des-bk card-body px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p class="txt-des-bk card-body px-0 pt-1">As much as it sounds awesome, Fueb has made sure that you are spared of the bulkiness and ungainly sights of appliances all over your haven instead give a good artistic look and feel. Extremely sleek and stylish world class designs will blend in with your interiors effortlessly. To add to your aesthetics, you can even customize the colour scheme.</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="tab-pane" id="Lights" role="tabpanel" aria-labelledby="Lights-tab"> 
+              <div class="tab-pane" id="Lights" role="tabpanel" aria-labelledby="Lights-tab">
                 <div class="accordion" id="accordion-light">
                   <div class="card acc-card">
                     <div class="card-header py-3 pl-0" id="headLight">
-                      <h2 class="my-2 section-sub-heading" data-toggle="collapse" data-target="#collapseLight" aria-expanded="true" aria-controls="collapseLight">What are the advantages of purchasing and installing the Fueb System?</h2>
+                      <h2 class="my-2 section-sub-heading" data-toggle="collapse" data-target="#collapseLight" aria-expanded="true" aria-controls="collapseLight">How does a home automation system help?</h2>
                     </div>
                     <div class="collapse show" id="collapseLight" aria-labelledby="headLight" data-parent="#accordion-light">
-                      <p class="card-body txt-des-bk px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p class="card-body txt-des-bk px-0 pt-1">Gone are those days when our physical presence was needed to manage house appliances like switch off/on lights, lock/unlock doors, and check if everything is in order before leaving for a business trip or a Holiday Vacation. A smart home, powered by intelligent technology will enable you to be at peace without compromising on your home’s security with you being in a completely different location. The systems are designed to also be helpful and come in very handy when you would want to remotely help you kids at home, elderly people and your loved ones who may need your assistance at any time of the day.</p>
                     </div>
                   </div>
                   <div class="card acc-card">
                     <div class="card-header py-2 py-md-4 pl-0" id="headTemparature">
-                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseTemparature" aria-expanded="false" aria-controls="collapseTemparature">Can i control all my device in fueb app ?</h2>
+                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseTemparature" aria-expanded="false" aria-controls="collapseTemparature">How do Fueb Touch-Magic switches work?</h2>
                     </div>
                     <div class="collapse" id="collapseTemparature" aria-labelledby="headTemparature" data-parent="#accordion-light">
-                      <p class="card-body txt-des-bk px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p class="card-body txt-des-bk px-0 pt-1">Enabled by voice activated technology Fueb's Touch-Magic switches let you manage your home as you speak. Manually with feather touch or via Fueb app. Its versatile designs can be chosen and customized to suit your taste; the Touch-Magic switches are also compatible with Google Homes and Amazon Alexa.</p>
                     </div>
                   </div>
                   <div class="card acc-card">
                     <div class="card-header py-2 py-md-4 pl-0" id="headingAmour">
-                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseAmour" aria-expanded="false" aria-controls="collapseAmour">How to connect armour lock with my google home</h2>
+                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseAmour" aria-expanded="false" aria-controls="collapseAmour">I am worried that my system’s security is at stake if I opt for a home automation system.</h2>
                     </div>
                     <div class="collapse" id="collapseAmour" aria-labelledby="headingAmour" data-parent="#accordion-light">
-                      <p class="txt-des-bk card-body px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p class="txt-des-bk card-body px-0 pt-1">Our automation system can be used and accessed via a secured app that ensures complete operational safety. Rest assured, your security will not be compromised or tampered with. We have embedded and followed highly secure and trusted safety protocols while designing and developing our products & applications whether it is to do with the data communication and or with the device safety protocols to not to be hacked.</p>
                     </div>
                   </div>
                   <div class="card acc-card">
                     <div class="card-header py-2 py-md-4 pl-0" id="headingVibe">
-                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseVibe" aria-expanded="false" aria-controls="collapseVibe">How to connect armour lock with my google home</h2>
+                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseVibe1" aria-expanded="false" aria-controls="collapseVibe">How do Armour smart lockswork?</h2>
                     </div>
-                    <div class="collapse" id="collapseVibe" aria-labelledby="headingVibe" data-parent="#accordion-light">
-                      <p class="txt-des-bk card-body px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                    <div class="collapse" id="collapseVibe1" aria-labelledby="headingVibe" data-parent="#accordion-light">
+                      <p class="txt-des-bk card-body px-0 pt-1">Fueb’s Armour smart locks are enabled with advanced biometric and RFID based access control. Besides assuring top-notch security, these locks are extremely convenient to use, helping you manage entry/exit and much more all from your smartphone.</p>
+                    </div>
+                  </div>
+                  <div class="card acc-card">
+                    <div class="card-header py-2 py-md-4 pl-0" id="headingVibe">
+                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseVibe2" aria-expanded="false" aria-controls="collapseVibe">How do Fueb’s Smart doorbell work?</h2>
+                    </div>
+                    <div class="collapse" id="collapseVibe2" aria-labelledby="headingVibe" data-parent="#accordion-light">
+                      <p class="txt-des-bk card-body px-0 pt-1">Vibe is not just your ordinary doorbell. With an in-built video and audio feature, you can instantly view and communicate who has arrived at your main door or gate. To add to your security, it can also alert you of suspicious activities. Vibe doorbells can be easily managed from your smartphone via the Fueb app. And it is water resistant; you can install outdoor to withstand outdoor weather conditions.</p>
+                    </div>
+                  </div>
+                  <div class="card acc-card">
+                    <div class="card-header py-2 py-md-4 pl-0" id="headingVibe">
+                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseVibe3" aria-expanded="false" aria-controls="collapseVibe">Is it compulsory to buy all Fueb devices to set up a smart home?</h2>
+                    </div>
+                    <div class="collapse" id="collapseVibe3" aria-labelledby="headingVibe" data-parent="#accordion-light">
+                      <p class="txt-des-bk card-body px-0 pt-1">You can choose to install one or all Fueb solution based on your automation requirement. However, multiple Fueb devices can work together to help you set up a great home automation system and make the most of it.</p>
+                    </div>
+                  </div>
+                  <div class="card acc-card">
+                    <div class="card-header py-2 py-md-4 pl-0" id="headingVibe">
+                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseVibe4" aria-expanded="false" aria-controls="collapseVibe">How can I operate Fueb devices from a wireless range?</h2>
+                    </div>
+                    <div class="collapse" id="collapseVibe4" aria-labelledby="headingVibe" data-parent="#accordion-light">
+                      <p class="txt-des-bk card-body px-0 pt-1">Fueb devices work seamlessly from a wireless range of with a good range to access them subject to construction of the building. Also, when operating on a wireless mode, our products do not interfere with other devices in the same zone.</p>
+                    </div>
+                  </div>
+                  <div class="card acc-card">
+                    <div class="card-header py-2 py-md-4 pl-0" id="headingVibe">
+                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseVibe5" aria-expanded="false" aria-controls="collapseVibe">How soon should I replace the batteries of Armour door locks?</h2>
+                    </div>
+                    <div class="collapse" id="collapseVibe5" aria-labelledby="headingVibe" data-parent="#accordion-light">
+                      <p class="txt-des-bk card-body px-0 pt-1">For a General usage, the Armour door locks come in with a battery life of up to 8-10 months, As a smart feature, you will get a warning on your phone when the battery reaches 25% of its capacity. Replacing the batteries is easy and takes a few minutes of your time and saves you of further hassles and defunct door locks.</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="tab-pane" id="Temperature" role="tabpanel" aria-labelledby="Temperature-tab"> 
+              <div class="tab-pane" id="Temperature" role="tabpanel" aria-labelledby="Temperature-tab">
                 <div class="accordion" id="accordion-temparature">
                   <div class="card acc-card">
                     <div class="card-header py-3 pl-0" id="headtmpOne">
-                      <h2 class="my-2 section-sub-heading" data-toggle="collapse" data-target="#collapsetmpOne" aria-expanded="true" aria-controls="collapsetmpOne">What are the advantages of purchasing and installing the Fueb System?</h2>
+                      <h2 class="my-2 section-sub-heading" data-toggle="collapse" data-target="#collapsetmpOne" aria-expanded="true" aria-controls="collapsetmpOne">Does Fueb partner with upcoming enterprises looking out to venture into the same domain?</h2>
                     </div>
                     <div class="collapse show" id="collapsetmpOne" aria-labelledby="headtmpOne" data-parent="#accordion-temparature">
-                      <p class="card-body txt-des-bk px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                    </div>
-                  </div>
-                  <div class="card acc-card">
-                    <div class="card-header py-2 py-md-4 pl-0" id="headingTempTwo">
-                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseTempTwo" aria-expanded="false" aria-controls="collapseTempTwo">How to connect armour lock with my google home</h2>
-                    </div>
-                    <div class="collapse" id="collapseTempTwo" aria-labelledby="headingTempTwo" data-parent="#accordion-temparature">
-                      <p class="txt-des-bk card-body px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                    </div>
-                  </div>
-                  <div class="card acc-card">
-                    <div class="card-header py-2 py-md-4 pl-0" id="headingTempTree">
-                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseTempTree" aria-expanded="false" aria-controls="collapseTempTree">How to connect armour lock with my google home</h2>
-                    </div>
-                    <div class="collapse" id="collapseTempTree" aria-labelledby="headingTempTree" data-parent="#accordion-temparature">
-                      <p class="txt-des-bk card-body px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                    </div>
-                  </div>
-                  <div class="card acc-card">
-                    <div class="card-header py-2 py-md-4 pl-0" id="headingtempFour">
-                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapsetempFour" aria-expanded="false" aria-controls="collapsetempFour">How to connect armour lock with my google home</h2>
-                    </div>
-                    <div class="collapse" id="collapsetempFour" aria-labelledby="headingtempFour" data-parent="#accordion-temparature">
-                      <p class="txt-des-bk card-body px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p class="card-body txt-des-bk px-0 pt-1">If you are a business and looking for home automation solutions with great technology, Fueb will be happy to partner with you. Together, we can embark on a business that is prospective, profitable and scalable.</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="tab-pane" id="lock" role="tabpanel" aria-labelledby="lock-tab"> 
+              <div class="tab-pane" id="lock" role="tabpanel" aria-labelledby="lock-tab">
                 <div class="accordion" id="accordion-Amour">
                   <div class="card acc-card">
                     <div class="card-header py-3 pl-0" id="headAmourOne">
-                      <h2 class="my-2 section-sub-heading" data-toggle="collapse" data-target="#collapseAmourOne" aria-expanded="true" aria-controls="collapseAmourOne">What are the advantages of purchasing and installing the Fueb System?</h2>
+                      <h2 class="my-2 section-sub-heading" data-toggle="collapse" data-target="#collapseAmourOne" aria-expanded="true" aria-controls="collapseAmourOne">How can I receive help with automation in my home when I am not there?</h2>
                     </div>
                     <div class="collapse show" id="collapseAmourOne" aria-labelledby="headAmourOne" data-parent="#accordion-Amour">
-                      <p class="card-body txt-des-bk px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                    </div>
-                  </div>
-                  <div class="card acc-card">
-                    <div class="card-header py-2 py-md-4 pl-0" id="headingAmourTwo">
-                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseAmourTwo" aria-expanded="false" aria-controls="collapseAmourTwo">How to connect armour lock with my google home</h2>
-                    </div>
-                    <div class="collapse" id="collapseAmourTwo" aria-labelledby="headingAmourTwo" data-parent="#accordion-Amour">
-                      <p class="txt-des-bk card-body px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                    </div>
-                  </div>
-                  <div class="card acc-card">
-                    <div class="card-header py-2 py-md-4 pl-0" id="headingAmourTree">
-                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseAmourTree" aria-expanded="false" aria-controls="collapseAmourTree">How to connect armour lock with my google home</h2>
-                    </div>
-                    <div class="collapse" id="collapseAmourTree" aria-labelledby="headingAmourTree" data-parent="#accordion-Amour">
-                      <p class="txt-des-bk card-body px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                    </div>
-                  </div>
-                  <div class="card acc-card">
-                    <div class="card-header py-2 py-md-4 pl-0" id="headingArmourFour">
-                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseArmourFour" aria-expanded="false" aria-controls="collapseArmourFour">How to connect armour lock with my google home</h2>
-                    </div>
-                    <div class="collapse" id="collapseArmourFour" aria-labelledby="headingArmourFour" data-parent="#accordion-Amour">
-                      <p class="txt-des-bk card-body px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p class="card-body txt-des-bk px-0 pt-1">Contingencies can arrive at any time and Fueb is just a click away. No matter where you are, Fueb can assist you remotely with setting up of the system, servicing and even send a service engineer, based on availability, to address any technical glitches.</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="tab-pane" id="vibe" role="tabpanel" aria-labelledby="lock-tab"> 
+              <div class="tab-pane" id="vibe" role="tabpanel" aria-labelledby="lock-tab">
                 <div class="accordion" id="accordion-Vibe-Bell">
                   <div class="card acc-card">
                     <div class="card-header py-3 pl-0" id="head-vibeOne">
-                      <h2 class="my-2 section-sub-heading" data-toggle="collapse" data-target="#collapse-vibeOne" aria-expanded="true" aria-controls="collapse-vibeOne">What are the advantages of purchasing and installing the Fueb System?</h2>
+                      <h2 class="my-2 section-sub-heading" data-toggle="collapse" data-target="#collapse-vibeOne" aria-expanded="true" aria-controls="collapse-vibeOne">Do I need to know programming to install Fueb home automation?</h2>
                     </div>
                     <div class="collapse show" id="collapse-vibeOne" aria-labelledby="head-vibeOne" data-parent="#accordion-Vibe-Bell">
-                      <p class="card-body txt-des-bk px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                    </div>
-                  </div>
-                  <div class="card acc-card">
-                    <div class="card-header py-2 py-md-4 pl-0" id="headingVibeTwo">
-                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseVibeTwo" aria-expanded="false" aria-controls="collapseVibeTwo">How to connect armour lock with my google home</h2>
-                    </div>
-                    <div class="collapse" id="collapseVibeTwo" aria-labelledby="headingVibeTwo" data-parent="#accordion-Vibe-Bell">
-                      <p class="txt-des-bk card-body px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                    </div>
-                  </div>
-                  <div class="card acc-card">
-                    <div class="card-header py-2 py-md-4 pl-0" id="headingVibeTree">
-                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseVibeTree" aria-expanded="false" aria-controls="collapseVibeTree">How to connect armour lock with my google home</h2>
-                    </div>
-                    <div class="collapse" id="collapseVibeTree" aria-labelledby="headingVibeTree" data-parent="#accordion-Vibe-Bell">
-                      <p class="txt-des-bk card-body px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                    </div>
-                  </div>
-                  <div class="card acc-card">
-                    <div class="card-header py-2 py-md-4 pl-0" id="headingVibeFour">
-                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseVibeFour" aria-expanded="false" aria-controls="collapseVibeFour">How to connect armour lock with my google home</h2>
-                    </div>
-                    <div class="collapse" id="collapseVibeFour" aria-labelledby="headingVibeFour" data-parent="#accordion-Vibe-Bell">
-                      <p class="txt-des-bk card-body px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS</p>
+                      <p class="card-body txt-des-bk px-0 pt-1">Fueb home automation devices are truly a class apart when it comes to user friendliness and design. All Fueb products come with in-built operating systems and are designed and developed keeping in mind the profile of a busy home owner. You do not require any programming skills to install and use Fueb home automation. However, should you face any difficulties with installation, kindly contact our customer support.</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="tab-pane" id="magic-tab" role="tabpanel" aria-labelledby="lock-tab"> 
+              <div class="tab-pane" id="magic-tab" role="tabpanel" aria-labelledby="lock-tab">
                 <div class="accordion" id="accordion-magic">
                   <div class="card acc-card">
                     <div class="card-header py-3 pl-0" id="head-MagicOne">
-                      <h2 class="my-2 section-sub-heading" data-toggle="collapse" data-target="#collapse-MagicOne" aria-expanded="true" aria-controls="collapse-MagicOne">What are the advantages of purchasing and installing the Fueb System?</h2>
+                      <h2 class="my-2 section-sub-heading" data-toggle="collapse" data-target="#collapse-MagicOne" aria-expanded="true" aria-controls="collapse-MagicOne">I’m afraid that Fueb home automation devices will add significantly to my electricity bills.</h2>
                     </div>
                     <div class="collapse show" id="collapse-MagicOne" aria-labelledby="head-MagicOne" data-parent="#accordion-magic">
-                      <p class="card-body txt-des-bk px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p class="card-body txt-des-bk px-0 pt-1">At Fueb, we believe that a smart home is a green home. Fueb devices are very energy efficient with the ability to be in idle mode when not in use. Opting for Fueb automation solutions will enable you to conserve energy, reduce carbon footprints and lower energy bills in no time.</p>
                     </div>
                   </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="sanitiz-tab" role="tabpanel" aria-labelledby="sanitiz-tab">
+                <div class="accordion" id="accordion-sanitiz">
                   <div class="card acc-card">
-                    <div class="card-header py-2 py-md-4 pl-0" id="headingMagicTwo">
-                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseMagicTwo" aria-expanded="false" aria-controls="collapseMagicTwo">How to connect armour lock with my google home</h2>
+                    <div class="card-header py-3 pl-0" id="sanitizone">
+                      <h2 class="my-2 section-sub-heading" data-toggle="collapse" data-target="#collapsanitizone" aria-expanded="true" aria-controls="collapsetmpOne">sanitizer</h2>
                     </div>
-                    <div class="collapse" id="collapseMagicTwo" aria-labelledby="headingMagicTwo" data-parent="#accordion-magic">
-                      <p class="txt-des-bk card-body px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                    </div>
-                  </div>
-                  <div class="card acc-card">
-                    <div class="card-header py-2 py-md-4 pl-0" id="headingMagicTree">
-                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseMagicTree" aria-expanded="false" aria-controls="collapseMagicTree">How to connect armour lock with my google home</h2>
-                    </div>
-                    <div class="collapse" id="collapseMagicTree" aria-labelledby="headingMagicTree" data-parent="#accordion-magic">
-                      <p class="txt-des-bk card-body px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                    </div>
-                  </div>
-                  <div class="card acc-card">
-                    <div class="card-header py-2 py-md-4 pl-0" id="headingMagicFour">
-                      <h2 class="my-2 collapsed section-sub-heading" data-toggle="collapse" data-target="#collapseMagicFour" aria-expanded="false" aria-controls="collapseMagicFour">How to connect armour lock with my google home</h2>
-                    </div>
-                    <div class="collapse" id="collapseMagicFour" aria-labelledby="headingMagicFour" data-parent="#accordion-magic">
-                      <p class="txt-des-bk card-body px-0 pt-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS</p>
+                    <div class="collapse show" id="collapsanitizone" aria-labelledby="sanitizone" data-parent="#accordion-sanitiz">
+                      <p class="card-body txt-des-bk px-0 pt-1">If you are a business and looking for home automation solutions with great technology, Fueb will be happy to partner with you. Together, we can embark on a business that is prospective, profitable and scalable.</p>
                     </div>
                   </div>
                 </div>

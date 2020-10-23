@@ -1,6 +1,6 @@
-from django.shortcuts import render, HttpResponse, redirect
+from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
-from django.contrib.auth.decorators import permission_required, login_required
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
 from .models import allthread
 from django.core.paginator import Paginator
@@ -10,41 +10,64 @@ User = get_user_model()
 
 # Create your views here.
 
+
 def index(request):
+    '''
+    This function loads the Landing page Where here we can navigate to each topics that
+    has been created for the discussion.
+
+    At the same time once you got redirected from the signin page it'll be redirected here from
+    the Signin page with Active User.
+    '''
     if request.method == 'POST':
         category = request.POST['category']
         product = request.POST['product']
         topic = request.POST['topic']
         message = request.POST['message']
         # print(category, product, topic, message)
-        b = allthread(category=category,product=product,topic=topic,content=message,thread_by=request.user)
+        b = allthread(category=category, product=product, topic=topic, content=message, thread_by=request.user)
         b.save()
         return redirect('index')
     all_entries = allthread.objects.all().order_by('-dateandtime')
     paginator = Paginator(all_entries, 5)
     page = request.GET.get('page')
     all_entries = paginator.get_page(page)
-    return render(request, 'community/forum-landing.html',{'all_entries':all_entries})
+    return render(request, 'community/forum-landing.html', {'all_entries': all_entries})
+
 
 def closed_issues(request):
-    all_entries = allthread.objects.all().filter(solved = True).order_by('-dateandtime')
+    '''
+    This Function declaration has made for Listing the total closed issues that have been recorded
+    from the Users.
+    '''
+    all_entries = allthread.objects.all().filter(solved=True).order_by('-dateandtime')
     paginator = Paginator(all_entries, 5)
     page = request.GET.get('page')
     all_entries = paginator.get_page(page)
-    return render(request, 'community/forum-landing.html',{'all_entries':all_entries})
+    return render(request, 'community/forum-landing.html', {'all_entries': all_entries})
+
 
 def opened_issues(request):
-    all_entries = allthread.objects.all().filter(solved = False).order_by('-dateandtime')
+    '''
+    This Function declaration has made for Listing the total Opened issues that have been recorded
+    from the Users.
+    '''
+    all_entries = allthread.objects.all().filter(solved=False).order_by('-dateandtime')
     paginator = Paginator(all_entries, 5)
     page = request.GET.get('page')
     all_entries = paginator.get_page(page)
-    return render(request, 'community/forum-landing.html',{'all_entries':all_entries})
+    return render(request, 'community/forum-landing.html', {'all_entries': all_entries})
+
 
 def counting_opened_issues(request):
-    count_entries = allthread.objects.all().filter(solved=False).count()
+    '''
+    This Function declaration has made for counting the total Opened and Closed issues that have been recorded
+    from the Users.
+    '''
+    count_entries = allthread.objects.all().filter(solved=False).count()  # noqa
     print(count_entries)
     data = {
-        'opened_issues':count_entries
+        'opened_issues': count_entries
     }
     if request.method == 'GET':
         return JsonResponse(data)
@@ -52,6 +75,9 @@ def counting_opened_issues(request):
 
 
 def login_forum(request):
+    '''
+    This Function declaration is for created for loading Login Page and for Accepting the Credentials, for Login.
+    '''
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -63,7 +89,11 @@ def login_forum(request):
             return redirect('login')
     return render(request, 'community/forum-login.html')
 
+
 def login_register(request):
+    '''
+    This Function declaration is for created for loading SignUp Page.
+    '''
     if request.method == 'POST':
         f_name = request.POST['fname']
         l_name = request.POST['lname']
@@ -84,30 +114,50 @@ def login_register(request):
             return redirect('index')
     return render(request, 'community/forum-register.html')
 
-@login_required(login_url = '/login/')
+
+@login_required(login_url='/login/')
 def logout_user(request):
+    '''
+    This Function declaration is for created for logout if their is a Active User and if logged In.
+    To Checkout i've been used decorator `@login_required`
+    '''
     logout(request)
     return redirect('index')
 
+
 def faq(request):
+    '''
+    This Function declaration is created for loading the FAQ[Frequently Asked Questions] Page.
+    '''
     return render(request, 'community/faq.html')
 
-def forum_thread(request, id):
-    # print(id)
-    entry = allthread.objects.get(pk=id)
-    # print(entry.topic)
-    return render(request, 'community/forum-thread.html',{'entry':entry})
 
-@login_required(login_url = '/login/')
+def forum_thread(request, id):
+    '''
+    This is the function which used to open the topic particularly the user clicked on the landing page
+    '''
+    entry = allthread.objects.get(pk=id)  # noqa
+    # print(entry.topic)
+    return render(request, 'community/forum-thread.html', {'entry': entry})
+
+
+@login_required(login_url='/login/')
 def profile(request):
+    '''
+    This function is defined to load the topics created by that particular User. Only If and if user is logged In.
+    '''
     if request.user.is_authenticated:
-        created_threads = allthread.objects.all().filter(thread_by = request.user)
+        created_threads = allthread.objects.all().filter(thread_by=request.user)  # noqa
         # print(created_threads)
         paginator = Paginator(created_threads, 2)
         page = request.GET.get('page')
         created_threads = paginator.get_page(page)
-    return render(request, 'community/profile.html',{'created_threads':created_threads})
+    return render(request, 'community/profile.html', {'created_threads': created_threads})
 
-@login_required(login_url = '/login/')
+
+@login_required(login_url='/login/')
 def profile_settings(request):
+    '''
+    This function is defined to load the Profile Settings Page. Only If and if user is logged In.
+    '''
     return render(request, 'community/profile-setting.html')
